@@ -67,10 +67,17 @@ export default function Episodes() {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(-1)}
         >
-          <div className="text-xl">{episode.title}</div>
-          <p className={`max-w-3xl ${hoveredIndex === index ? 'text-gray-600' : 'text-gray-400'}`}>
-            {episode.description}
-          </p>
+          <div className="flex flex-wrap md:flex-nowrap gap-4">
+              <div>
+                <img src="https://via.placeholder.com/150" alt="" />
+              </div>
+              <div>
+                <div className="text-xl">{episode.title}</div>
+                <p className={`max-w-3xl ${hoveredIndex === index ? 'text-gray-600' : 'text-gray-400'}`}>
+                  {episode.description}
+                </p>
+              </div>
+            </div>
         </div>
       ))}
     </div>

@@ -15,7 +15,9 @@ export default function HomePage() {
         <Heading
           text="latest episodes"
         />
-        <Episodes/>
+        <Episodes
+          limit={3}
+        />
       </Layout>
     </>
   )

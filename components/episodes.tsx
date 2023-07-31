@@ -63,13 +63,17 @@ const episodesData = [
     }
 ];
 
+type EpisodesPropsType = {
+    limit?: number,
+}
 
-export default function Episodes() {
+export default function Episodes({limit}: EpisodesPropsType) {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
+  const episodesToDisplay = limit ? episodesData.slice(0, limit) : episodesData;
 
   return(
     <div>
-      {episodesData.map((episode, index) => (
+      {episodesToDisplay.map((episode, index) => (
         <div
           key={index}
           className={`-mx-5 hover:bg-white hover:text-black px-5 hover:cursor-pointer py-3 ${

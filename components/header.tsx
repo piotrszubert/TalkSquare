@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 const links = [
     {name: 'Home', path: '/'},
     {name: 'Episodes', path: '/episodes'},
-    {name: 'Contact', path: '/contact'},
+    {name: 'About', path: '/about'},
 ]
 
 export default function Header() {
@@ -12,7 +12,8 @@ export default function Header() {
     return(
         <header className="border-b border-white">
             <div className="max-w-5xl mx-auto flex justify-between border-x border-white py-5 px-5">
-                <div className="font-bold">
+                <div className="font-bold flex items-center gap-3">
+                    <span className="bg-blue-600 w-6 h-6 inline-block"></span>
                     TalkSquare
                 </div>
                 <div>

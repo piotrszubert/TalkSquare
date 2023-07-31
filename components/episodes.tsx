@@ -67,6 +67,7 @@ export default function Episodes() {
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(-1)}
         >
+          <Link className="absolute inset-0" href={`/episodes/[id]`} as={`/episodes/${episode.id}`}></Link>
           <div className="flex flex-wrap md:flex-nowrap gap-4">
               <div>
                 <img src="https://via.placeholder.com/150" alt="" />

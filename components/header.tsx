@@ -3,7 +3,7 @@ export default function Header() {
         <header className="border-b border-white">
             <div className="max-w-5xl mx-auto flex justify-between border-x border-white py-5 px-5">
                 <div className="font-bold">
-                    TalkWave
+                    TalkSquare
                 </div>
                 <div>
                     <nav>

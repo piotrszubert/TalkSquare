@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TalkWave - Home</title>
+        <title>TalkSquare - Home</title>
       </Head>
       <Layout>
         <Hero/>

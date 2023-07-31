@@ -1,3 +1,4 @@
+import { useState } from "react";
 const episodesData = [
     {
       title: "The Art of Creativity: Unleashing Your Inner Genius",
@@ -53,11 +54,23 @@ const episodesData = [
 
 
 export default function Episodes() {
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
+
   return(
     <div>
       {episodesData.map((episode, index) => (
-        <div key={index} className="-mx-5 hover:bg-white hover:text-black px-5 hover:cursor-pointer">
-          {episode.title}
+        <div
+          key={index}
+          className={`-mx-5 hover:bg-white hover:text-black px-5 hover:cursor-pointer py-3 ${
+            hoveredIndex === index ? 'hovered' : ''
+          }`}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(-1)}
+        >
+          <div className="text-xl">{episode.title}</div>
+          <p className={`max-w-3xl ${hoveredIndex === index ? 'text-gray-600' : 'text-gray-400'}`}>
+            {episode.description}
+          </p>
         </div>
       ))}
     </div>

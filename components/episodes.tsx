@@ -65,11 +65,18 @@ const episodesData = [
 
 type EpisodesPropsType = {
     limit?: number,
+    ascending?: boolean, 
 }
 
-export default function Episodes({limit}: EpisodesPropsType) {
+export default function Episodes({limit, ascending = true}: EpisodesPropsType) {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
-  const episodesToDisplay = limit ? episodesData.slice(0, limit) : episodesData;
+  let episodesToDisplay = [...episodesData];
+
+  if(!ascending) {
+    episodesToDisplay.reverse();
+  }
+
+  episodesToDisplay = limit ? episodesToDisplay.slice(0, limit) : episodesToDisplay;
 
   return(
     <div>

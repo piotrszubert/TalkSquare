@@ -1,4 +1,5 @@
 import Episodes from "@/components/episodes";
+import Heading from "@/components/heading";
 import Layout from "@/components/layout";
 import Head from "next/head";
 
@@ -9,10 +10,9 @@ export default function EpisodesPage() {
                 <title>TalkSquare - Episodes</title>
             </Head>
             <Layout>
-                <div className="bg-white py-5 -mx-5 flex gap-3 items-center">
-                    <span className="ms-5 bg-blue-600 w-6 h-6 inline-block"></span>
-                    <span className="font-bold text-black text-6xl">ALL EPISODES</span>
-                </div>
+                <Heading
+                    text="all episodes"
+                />
                 <Episodes/>
             </Layout>
         </>

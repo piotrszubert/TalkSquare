@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 const episodesData = [
     {
@@ -79,13 +80,22 @@ export default function Episodes() {
         >
           <div className="flex flex-wrap md:flex-nowrap gap-4">
               <div>
-                <img src="https://via.placeholder.com/150" alt="" />
+                <Image
+                  width={150}
+                  height={150}
+                  quality={100}
+                  src={`/${episode.id}.jpg`}
+                  alt="episode image"
+                />
               </div>
               <div>
-                <div className="text-xl">
-                  {episode.id < 10 ? `#0${episode.id}` : `#${episode.id}`} {episode.title}
+                <div className="text-xl mb-1 font-bold">
+                  {episode.id < 10 ? `#0${episode.id}` : `#${episode.id}`} {episode.guest.name}
                 </div>
-                <p className={`max-w-3xl ${hoveredIndex === index ? 'text-gray-600' : 'text-gray-400'}`}>
+                <div className="font-semibold">
+                  {episode.title}
+                </div>
+                <p className={`max-w-xl ${hoveredIndex === index ? 'text-gray-600' : 'text-gray-400'}`}>
                   {episode.description}
                 </p>
               </div>

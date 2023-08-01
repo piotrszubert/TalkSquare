@@ -57,9 +57,13 @@ export default function HomePage() {
                     We&apos;d love to hear from you! Have a suggestion,
                     a question, or want to be a guest on our show? Connect with us.
                     <div>
-                        <Button>
-                            Contact Us
-                        </Button>
+                        <Link
+                            href="mailto:example@example.com"
+                        >
+                            <Button>
+                                Contact Us
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </Layout>

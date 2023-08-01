@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const links = [
     {name: 'Home', path: '/'},
@@ -8,7 +9,9 @@ const links = [
 ]
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
+
     return(
         <header className="border-b border-white">
             <div className="max-w-5xl mx-auto flex justify-between border-x border-white py-5 px-5">
@@ -16,7 +19,7 @@ export default function Header() {
                     <span className="bg-blue-600 w-6 h-6 inline-block"></span>
                     TalkSquare
                 </div>
-                <div>
+                <div className="hidden md:block">
                     <nav>
                         <ul className="flex gap-3">
                             {links.map((link, index) => (
@@ -34,7 +37,28 @@ export default function Header() {
                         </ul>
                     </nav>
                 </div>
+                <button className="inline-flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                    MENU
+                </button>
             </div>
+            {isOpen && (
+                <nav>
+                    <ul className="flex items-center flex-col border-x border-white gap-3 py-3">
+                        {links.map((link, index) => (
+                            <li
+                                key={index}
+                            >
+                                <Link
+                                    className={`${router.asPath === link.path ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
+                                    href={link.path}    
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
         </header>
     );
 }

@@ -34,6 +34,18 @@ export default function EpisodePage() {
                 <title>TalkSquare - {episode.title}</title>
             </Head>
             <Layout>
+                <div className="py-3">
+                    <Link
+                        href="/episodes"
+                    >
+                        <Button className="gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                            </svg>
+                            Back to episodes
+                        </Button>
+                    </Link>
+                </div>
                 <Heading text={`#${episode.id < 10 ? '0' + episode.id : episode.id} ${episode.guest.name}`} />
                 <div className="py-3">
                     <div className="mb-3">

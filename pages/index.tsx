@@ -1,8 +1,10 @@
+import Button from '@/components/button'
 import Episodes from '@/components/episodes'
 import Heading from '@/components/heading'
 import Hero from '@/components/hero'
 import Layout from '@/components/layout'
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function HomePage() {
     return (
@@ -19,6 +21,23 @@ export default function HomePage() {
                     ascending={false}
                     limit={3}
                 />
+                <div className="py-6 grid place-items-center">
+                    <Link href="/episodes">
+                        <Button className="flex gap-3">
+                            <span>Explore all episodes</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-6 h-6"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                            </svg>
+                        </Button>
+                    </Link>
+                </div>
             </Layout>
         </>
     )

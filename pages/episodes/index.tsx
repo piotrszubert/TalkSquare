@@ -4,7 +4,7 @@ import Layout from "@/components/layout";
 import Head from "next/head";
 
 export default function EpisodesPage() {
-    return(
+    return (
         <>
             <Head>
                 <title>TalkSquare - Episodes</title>
@@ -13,7 +13,7 @@ export default function EpisodesPage() {
                 <Heading
                     text="all episodes"
                 />
-                <Episodes/>
+                <Episodes />
             </Layout>
         </>
     );

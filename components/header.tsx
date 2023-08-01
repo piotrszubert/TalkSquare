@@ -3,44 +3,44 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 const links = [
-    {name: 'Home', path: '/'},
-    {name: 'Episodes', path: '/episodes'},
-    {name: 'About', path: '/about'},
+    { name: 'Home', path: '/' },
+    { name: 'Episodes', path: '/episodes' },
+    { name: 'About', path: '/about' },
 ]
 
 const HamburgerIcon = () => {
-    return(
-        <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            strokeWidth={1.5} 
-            stroke="currentColor" 
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
             className="w-6 h-6"
         >
-            <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                d="M3.75 9h16.5m-16.5 6.75h16.5" 
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
             />
         </svg>
     );
 }
 
 const CloseIcon = () => {
-    return(
-        <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            strokeWidth={1.5} 
-            stroke="currentColor" 
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
             className="w-6 h-6"
         >
-            <path 
+            <path
                 strokeLinecap="round"
-                strokeLinejoin="round" 
-                d="M6 18L18 6M6 6l12 12" 
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
             />
         </svg>
     );
@@ -50,7 +50,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
-    return(
+    return (
         <header className="border-b border-white">
             <div className="max-w-5xl mx-auto flex justify-between border-x border-white py-5 px-5">
                 <div className="font-bold flex items-center gap-3">
@@ -66,7 +66,7 @@ export default function Header() {
                                 >
                                     <Link
                                         className={`${router.asPath === link.path ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
-                                        href={link.path}    
+                                        href={link.path}
                                     >
                                         {link.name}
                                     </Link>
@@ -76,7 +76,7 @@ export default function Header() {
                     </nav>
                 </div>
                 <button className="inline-flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <CloseIcon/> : <HamburgerIcon/>}
+                    {isOpen ? <CloseIcon /> : <HamburgerIcon />}
 
                 </button>
             </div>
@@ -89,7 +89,7 @@ export default function Header() {
                             >
                                 <Link
                                     className={`${router.asPath === link.path ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
-                                    href={link.path}    
+                                    href={link.path}
                                 >
                                     {link.name}
                                 </Link>

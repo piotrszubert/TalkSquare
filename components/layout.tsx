@@ -6,19 +6,19 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 interface LayoutProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return (
-    <>
-      <Header />
-        <main
-            className={`${inter.className} min-h-screen max-w-5xl border-x border-white mx-auto px-5`}
-        >
-            {children}
-        </main>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <main
+                className={`${inter.className} min-h-screen max-w-5xl border-x border-white mx-auto px-5`}
+            >
+                {children}
+            </main>
+            <Footer />
+        </>
+    );
 }

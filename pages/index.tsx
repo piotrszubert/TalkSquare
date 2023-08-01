@@ -5,23 +5,23 @@ import Layout from '@/components/layout'
 import Head from 'next/head'
 
 export default function HomePage() {
-  return (
-    <>
-      <Head>
-        <title>TalkSquare - Home</title>
-      </Head>
-      <Layout>
-        <Hero/>
-        <Heading
-          text="latest episodes"
-        />
-        <Episodes
-          ascending={false}
-          limit={3}
-        />
-      </Layout>
-    </>
-  )
+    return (
+        <>
+            <Head>
+                <title>TalkSquare - Home</title>
+            </Head>
+            <Layout>
+                <Hero />
+                <Heading
+                    text="latest episodes"
+                />
+                <Episodes
+                    ascending={false}
+                    limit={3}
+                />
+            </Layout>
+        </>
+    )
 }
 
 

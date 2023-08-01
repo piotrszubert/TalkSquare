@@ -38,18 +38,31 @@ export default function HomePage() {
                         </Button>
                     </Link>
                 </div>
+                <Heading
+                    text="subsription"
+                />
+                <div className='flex flex-col gap-3 py-6'>
+                    Subscribe now to never miss an episode of TalkSquare! Stay updated with the 
+                    latest conversations, insightful guests, and captivating narratives.
+                    <div>
+                        <Button>
+                            Subscribe now!
+                        </Button>
+                    </div>
+                </div>
+                <Heading
+                    text="Contact"
+                />
+                <div className='flex flex-col gap-3 py-6'>
+                    We'd love to hear from you! Have a suggestion,
+                    a question, or want to be a guest on our show? Connect with us.
+                    <div>
+                        <Button>
+                            Contact Us
+                        </Button>
+                    </div>
+                </div>
             </Layout>
         </>
     )
 }
-
-
-// [Subscription Section]
-
-// "Subscribe now to never miss an episode of TalkSquare! Stay updated with the latest conversations, insightful guests, and captivating narratives."
-// [Subscribe Buttons]: Apple Podcasts | Spotify | Google Podcasts | Stitcher
-
-// [Contact Section]
-
-// "We'd love to hear from you! Have a suggestion, a question, or want to be a guest on our show? Connect with us."
-// [Contact Button]: Contact Us

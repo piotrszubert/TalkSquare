@@ -54,7 +54,7 @@ export default function HomePage() {
                     text="Contact"
                 />
                 <div className='flex flex-col gap-3 py-6'>
-                    We'd love to hear from you! Have a suggestion,
+                    We&apos;d love to hear from you! Have a suggestion,
                     a question, or want to be a guest on our show? Connect with us.
                     <div>
                         <Button>

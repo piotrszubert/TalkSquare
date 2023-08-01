@@ -42,8 +42,10 @@ export default function HomePage() {
                     text="subsription"
                 />
                 <div className='flex flex-col gap-3 py-6'>
-                    Subscribe now to never miss an episode of TalkSquare! Stay updated with the 
-                    latest conversations, insightful guests, and captivating narratives.
+                    <p className="text-lg">
+                        Subscribe now to never miss an episode of TalkSquare! Stay updated with the 
+                        latest conversations, insightful guests, and captivating narratives.
+                    </p>
                     <div>
                         <Button>
                             Subscribe now!
@@ -54,8 +56,10 @@ export default function HomePage() {
                     text="Contact"
                 />
                 <div className='flex flex-col gap-3 py-6'>
-                    We&apos;d love to hear from you! Have a suggestion,
-                    a question, or want to be a guest on our show? Connect with us.
+                    <p className="text-lg max-w-xl">
+                        We&apos;d love to hear from you! Have a suggestion,
+                        a question, or want to be a guest on our show? Connect with us.
+                    </p>
                     <div>
                         <Link
                             href="mailto:example@example.com"

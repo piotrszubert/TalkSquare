@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <div className="text-white text-start py-16">
+        <div className="text-white text-start py-16 max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to TalkSquare</h1>
             <p className="text-lg mb-6">
                 Where intriguing conversations flow! Join us on a journey of insightful discussions,

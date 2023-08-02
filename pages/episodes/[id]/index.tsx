@@ -34,7 +34,7 @@ export default function EpisodePage() {
                 <title>TalkSquare - {episode.title}</title>
             </Head>
             <Layout>
-                <div className="py-3">
+                <div className="py-6">
                     <Link
                         href="/episodes"
                     >

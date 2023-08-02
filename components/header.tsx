@@ -50,6 +50,11 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
+    const isActiveLink = (link: any) => {
+        const isEpisodesPage = router.pathname.startsWith('/episodes/');
+        return router.asPath === link.path || (isEpisodesPage && link.name === "Episodes");
+    }
+
     return (
         <header className="border-b border-white">
             <div className="max-w-5xl mx-auto flex justify-between border-x border-white py-5 px-5">
@@ -65,7 +70,7 @@ export default function Header() {
                                     key={index}
                                 >
                                     <Link
-                                        className={`${router.asPath === link.path ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
+                                        className={`${isActiveLink(link) ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
                                         href={link.path}
                                     >
                                         {link.name}
@@ -88,7 +93,7 @@ export default function Header() {
                                 key={index}
                             >
                                 <Link
-                                    className={`${router.asPath === link.path ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
+                                    className={`${isActiveLink(link) ? 'text-white' : 'text-gray-400'} text-gray-400 hover:text-white font-bold`}
                                     href={link.path}
                                 >
                                     {link.name}

@@ -3,6 +3,9 @@ import Layout from "@/components/layout";
 import Head from "next/head";
 import { useRouter } from 'next/router'
 import episodesData from '@/data/episodesData';
+import Button from "@/components/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function EpisodePage() {
     const router = useRouter();
@@ -31,17 +34,44 @@ export default function EpisodePage() {
                 <title>TalkSquare - {episode.title}</title>
             </Head>
             <Layout>
-                <Heading text={episode.guest.name} />
-                {/* Display the rest of the episode details */}
-                <div>
-                    <h2>Description:</h2>
-                    <p>{episode.description}</p>
-                    <h2>Guest:</h2>
-                    <p>
-                        Name: {episode.guest.name}
-                        <br />
-                        Profession: {episode.guest.profession}
+                <div className="py-6">
+                    <Link
+                        href="/episodes"
+                    >
+                        <Button className="gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                            </svg>
+                            Back to episodes
+                        </Button>
+                    </Link>
+                </div>
+                <Heading text={`#${episode.id < 10 ? '0' + episode.id : episode.id} ${episode.guest.name}`} />
+                <div className="mt-6">
+                    <div className="mb-3">
+                        <Image
+                            width={150}
+                            height={150}
+                            alt="alt"
+                            src={`/${episode.id}.jpg`}
+                        />
+                    </div>
+                    <div className="text-xl">
+                        {episode.title}
+                    </div>
+                    <p className="text-lg text-gray-400 max-w-2xl">
+                        {episode.description}
                     </p>
+                </div>
+                <div className="py-6">
+                    <Link
+                        target="_blank"
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    >
+                        <Button>
+                            Listen on Spotify
+                        </Button>
+                    </Link>
                 </div>
             </Layout>
         </>

@@ -47,7 +47,7 @@ export default function EpisodePage() {
                     </Link>
                 </div>
                 <Heading text={`#${episode.id < 10 ? '0' + episode.id : episode.id} ${episode.guest.name}`} />
-                <div className="py-3">
+                <div className="mt-6">
                     <div className="mb-3">
                         <Image
                             width={150}
@@ -63,14 +63,16 @@ export default function EpisodePage() {
                         {episode.description}
                     </p>
                 </div>
-                <Link
-                    target="_blank"
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                >
-                    <Button>
-                        Listen on Spotify
-                    </Button>
-                </Link>
+                <div className="py-6">
+                    <Link
+                        target="_blank"
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    >
+                        <Button>
+                            Listen on Spotify
+                        </Button>
+                    </Link>
+                </div>
             </Layout>
         </>
     );

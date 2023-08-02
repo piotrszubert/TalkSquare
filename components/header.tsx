@@ -5,7 +5,7 @@ import { useState } from "react";
 const links = [
     { name: 'Home', path: '/' },
     { name: 'Episodes', path: '/episodes' },
-    { name: 'About', path: '/about' },
+    // { name: 'About', path: '/about' },
 ]
 
 const HamburgerIcon = () => {

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+	--foreground-rgb: 255, 255, 255;
+	--background-rgb: 0, 0, 0;
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
-    background-color: rgb(var(--background-rgb));
+	color: rgb(var(--foreground-rgb));
+	background-color: rgb(var(--background-rgb));
 }

@@ -1,5 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  return <main>main <Button>das</Button></main>
+  return (
+    <main>
+      <ThemeToggle />
+      main <Button>das</Button>
+    </main>
+  )
 }
